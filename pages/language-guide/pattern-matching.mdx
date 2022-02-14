@@ -8,11 +8,24 @@ Pattern matching is a mechanism for checking a value against a pattern.
 
 ## Syntax
 
+A match expression has a value, the `match` keyword, and at least one `case` clause.
+
 ```js
 const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const result = binarySearch(data, 3);
 match result {
     case Some(_) => print("1: found")
     case None => print("1: not found")
+}
+```
+
+Match expressions have a value.
+
+```js
+function myNot(v: boolean): boolean {
+    match v {
+        case true => false
+        case false => true
+    }
 }
 ```
