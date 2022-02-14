@@ -2,6 +2,7 @@
   "the-basics": "The Basics",
   "control-flow": "Control Flow",
   "functions": "Functions",
+  "lambda-expression": "Lambda Expression",
   "enumerations": "Enumerations",
   "classes": "Classes"
 }

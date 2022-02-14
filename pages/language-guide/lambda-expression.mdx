@@ -1,0 +1,27 @@
+---
+title: Lambda Expression
+---
+
+# Lambda Expression
+
+You use a lambda expression to create an anonymous function.
+A lambda expression can be of any of the following two forms:
+
+- Expression lambda that has an expression as its body:
+
+```text
+(input-parameters) => expression
+```
+
+- Statement lambda that has a statement block as its body:
+
+```text
+(input-parameters) => { <sequence-of-statements> }
+```
+
+Example:
+
+```js
+const arr = [3, 2, 1, 4, 5];
+arr.sort((a: i32, b: i32): i32 => a - b);
+```
