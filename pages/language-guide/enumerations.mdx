@@ -1,0 +1,34 @@
+---
+title: Enumerations
+---
+
+# Enumerations
+
+An enumeration defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
+
+## Enumeration Syntax
+
+You introduce enumerations with the `enum` keyword and place their entire definition within a pair of braces:
+
+```js
+public enum Option<A> {
+    case Some(A)
+    case None
+}
+```
+
+## Matching Enumeration Values with a Match Expression
+
+You can match individual enumeration values with a `match` expression:
+
+```js
+let a = Some(1);
+match a {
+    case Some(i) => {
+        print("Some")
+    }
+    case None => {
+        print("None")
+    }
+}
+```
