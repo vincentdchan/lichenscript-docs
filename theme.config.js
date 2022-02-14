@@ -55,6 +55,18 @@ export default {
         href="/favicon-16x16.png"
       />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-322TTNCM99"/>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-322TTNCM99');
+          `,
+        }}
+      />
     </>
   ),
   search: true,

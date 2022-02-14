@@ -4,5 +4,6 @@
   "functions": "Functions",
   "lambda-expression": "Lambda Expression",
   "enumerations": "Enumerations",
+  "pattern-matching": "Pattern Matching",
   "classes": "Classes"
 }
