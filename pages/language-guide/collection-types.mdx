@@ -12,6 +12,12 @@ Swift provides three primary collection types, known as arrays and maps.
 const arr = [3, 2, 1, 4, 5];
 ```
 
+### Get the length of an array
+
+```js
+arr.length
+```
+
 ### Push elements to array
 
 ```js
@@ -23,13 +29,23 @@ while i < 100 {
 }
 ```
 
-### Resize array
+### Slice an array
 
 ```js
-a.resize(10, 6);
+arr.slice(2, 3)
 ```
 
-## Map
+### Resize array
+
+Resize the array with a default value.
+
+```js
+a.resize(10, 0);
+```
+
+## Maps
+
+Maps are collections of key-value associations.
 
 ```js
 let a = #{
