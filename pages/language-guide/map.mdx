@@ -1,0 +1,25 @@
+---
+title: Map
+---
+
+# Map
+
+## Syntax
+
+```js
+let a = #{
+	"name": "Vincent Chan"
+};
+```
+
+A map with type `Map<string, string>` will return.
+
+## Get a value from the map
+
+```js
+let test = a.get("name");
+match test {
+	case Some(name) => print("found: ", name)
+	case None => print("not found")
+}
+```
