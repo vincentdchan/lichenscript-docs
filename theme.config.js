@@ -1,5 +1,5 @@
 export default {
-  github: 'https://github.com/vincentdchan/LichenScript',
+  github: 'https://github.com/lichenscript/lichenscript',
   docsRepositoryBase: 'https://github.com/vincentdchan/lichenscript-docs',
   titleSuffix: ' – LichenScript',
   logo: (
