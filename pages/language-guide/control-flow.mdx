@@ -19,6 +19,15 @@ if num % i == 0 {
 }
 ```
 
+Unlike most common C-family languages,
+`if` is an expression in LichenScript.
+You can use it in another expression.
+
+```js
+const max = if a > b { a } else { b };
+print(max);
+```
+
 ## While
 
 A `while` loop starts by evaluating a single condition.
