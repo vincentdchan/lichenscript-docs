@@ -42,3 +42,14 @@ Execute the command to run:
 lsc run ./main.lc
 ```
 
+## WebAssembly
+
+Make sure you have installed [Emscripten](https://emscripten.org/)
+and [Node.js](https://nodejs.org/).
+And make sure `emcc` is available in your shell.
+
+Execute the command:
+
+```shell
+lsc run --platform wasm32 ./main.lc
+```

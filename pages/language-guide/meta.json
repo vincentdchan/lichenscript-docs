@@ -1,10 +1,10 @@
 {
   "the-basics": "The Basics",
+  "collection-types": "Collection Types",
   "control-flow": "Control Flow",
   "functions": "Functions",
   "lambda-expression": "Lambda Expression",
   "enumerations": "Enumerations",
   "pattern-matching": "Pattern Matching",
-  "classes": "Classes",
-  "map": "Map"
+  "classes": "Classes"
 }
