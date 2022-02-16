@@ -4,7 +4,33 @@ title: Collection Types
 
 # Collection Types
 
-Swift provides three primary collection types, known as arrays and maps.
+LichenScript provides three primary collection types, known as tuples, arrays and maps.
+
+## Tuple
+
+In LichenScript, a tuple is a value that contains a fixed number of elements, each with its own type. Tuples are immutable.
+
+Tuples are especially handy for returning multiple values from a method.
+
+A tuple with two elements can be created as follows:
+
+```js
+const tuple = ("one", 1);
+```
+
+This creates a tuple containing a `string` element and an `i32` element.
+
+### Pattern matching on tuples
+
+A tuple can also be taken apart using pattern matching:
+
+```js
+match tuple {
+	case (name, num) => print("name: ", name, " num: ", num)
+}
+```
+
+Here name’s inferred type is `string` and num's inferred type is `i32`.
 
 ## Array
 
