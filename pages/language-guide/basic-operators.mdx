@@ -1,0 +1,68 @@
+---
+title: Basic Operators
+---
+
+# Basic Operators
+
+An operator is a special symbol or phrase that you use to check, change, or combine values.
+For example, the addition operator (`+`) adds two numbers,
+as in `const i = 1 + 2`,
+and the logical AND operator (`&&`) combines two Boolean values, as in `if isPrime && isEven`.
+
+LichenScript supports the operators you may already know from languages like JavaScript.
+The assignment operator (`=`) doesn’t return a value, to prevent it from being mistakenly used when the equal to operator (`==`) is intended.
+
+## Assignment Operator
+
+The assignment operator (`a` = `b`) initializes or updates the value of a with the value of `b`:
+
+```js
+const b = 10
+let a = 5
+a = b
+// a is now equal to 10
+```
+
+## Arithmetic Operators
+
+LichenScript supports the four standard arithmetic operators for all number types:
+
+- Addition (`+`)
+- Subtraction (`-`)
+- Multiplication (`*`)
+- Division (`/`)
+
+```js
+1 + 2       // equals 3
+5 - 3       // equals 2
+2 * 3       // equals 6
+10.0 / 2.5  // equals 4.0
+```
+
+The addition operator is also supported for `string` concatenation:
+
+```js
+"hello, " + "world"  // equals "hello, world"
+```
+
+## Comparison Operators
+
+LichenScript supports the following comparison operators:
+
+- Equal to (a `==` b)
+- Not equal to (a `!=` b)
+- Greater than (a `>` b)
+- Less than (a `<` b)
+- Greater than or equal to (a `>=` b)
+- Less than or equal to (a `<=` b)
+
+Each of the comparison operators returns a Bool value to indicate whether or not the statement is true:
+
+```js
+1 == 1   // true because 1 is equal to 1
+2 != 1   // true because 2 isn't equal to 1
+2 > 1    // true because 2 is greater than 1
+1 < 2    // true because 1 is less than 2
+1 >= 1   // true because 1 is greater than or equal to 1
+2 <= 1   // false because 2 isn't less than or equal to 1
+```
