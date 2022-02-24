@@ -32,3 +32,46 @@ match a {
     }
 }
 ```
+
+## Method
+
+Methods are functions that belong to instances of a particular enumeration.
+You write an instance method within the opening and closing braces of the enumeration it belongs to.
+
+Here’s an example that defines a simple `Option` class, which is defined in
+the standard library:
+
+```js
+public enum Option<A> {
+    case Some(A)
+    case None
+
+    public isSome(): boolean {
+        match this {
+            case Some(_) => true
+            case _ => false
+        }
+    }
+
+    public isNone(): boolean {
+        match this {
+            case None => true
+            case Some(_) => false
+        }
+    }
+
+}
+```
+
+The `Option` class defines two instance methods:
+
+- `isSome()` judges if the enum is in the case of `Some`
+- `isNone()` judges if the enum is in the case of `None`
+
+You call instance methods with the same dot syntax as properties:
+
+```js
+let a = Some(1);
+print(a.isSome());  // => true
+print(a.isNone());  // => false
+```
