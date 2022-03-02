@@ -61,3 +61,23 @@ Execute the command:
 ```shell
 lsc run --platform wasm32 ./main.lc
 ```
+
+### Standalone WebAssembly
+
+By default, the compiler generate the wasm files along with
+a JavaScript file to load the WebAssembly file.
+
+But if you want to compile LichenScript to a standalone wasm
+and load with a runtime, you can use the flag `--standalone-wasm`.
+
+For example, if you want use [wasmedge](https://wasmedge.org/) to execute the wasm file,
+execute the command:
+
+```shell
+lsc run --platform wasm32 --standalone-wasm wasmedge ./main.lc
+```
+
+A standalone wasm will be generated and the compiler will
+spawn wasmedge to execute the wasm.
+
+Before you execute this above command, make sure you have install [wasmedge](https://wasmedge.org/).
