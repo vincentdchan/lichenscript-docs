@@ -6,7 +6,7 @@ export default {
     <>
       <span className="mr-2 font-extrabold hidden md:inline">LichenScript</span>
       <span className="text-gray-600 font-normal hidden md:inline">
-        A lightweight language compiled to JavaScript/C.
+        A quick and small language compiled to JavaScript/C.
       </span>
     </>
   ),
