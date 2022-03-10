@@ -1,0 +1,30 @@
+---
+title: Conditional Compilation
+---
+
+# Conditional Compilation
+
+Sometimes you want some code that is only available on some specific platforms.
+You need conditional compilation.
+
+In LichenScript, you can use an attribute to tell the compiler whether to use the code in specific platforms.
+That's the `platform` tag.
+
+For example, you want to define a platform-specific function named fork.
+Then you add an attribute to it.
+
+```js
+@platform("native")
+function fork() {
+	// TODO
+}
+```
+
+You can add multiple platforms:
+
+```js
+@platform("native", "wasm32")
+function fork() {
+	// TODO
+}
+```

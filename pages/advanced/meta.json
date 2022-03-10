@@ -1,4 +1,5 @@
 {
+  "conditional-compilation": "Conditional Compilation",
   "syntax-highlighting": "Syntax Highlighting",
   "garbage-collection": "Garbage Collection"
 }
