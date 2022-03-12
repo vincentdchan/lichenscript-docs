@@ -1,0 +1,37 @@
+
+# File system
+
+The fs module enables interacting with the file system in a way modeled on standard POSIX functions.
+
+[Repo](https://github.com/lichenscript/lichenscript-fs)
+
+## Install
+
+To keep the core program simplified, the FS module is not included by the runtime, so you have to install it from npm.
+
+```
+npm install --save lichenscript-fs
+```
+
+## Usage
+
+Read data from file:
+
+```js
+import fs from "lichenscript-fs";
+
+function main() {
+  const content = fs.readFileContent("/tmp/foo.txt").unwrap();
+  print(content);
+}
+```
+
+Write data to file:
+
+```js
+import fs from "lichenscript-fs";
+
+function main() {
+  fs.writeFileContent("foo.txt", "Hello World").unwrap();
+}
+```
