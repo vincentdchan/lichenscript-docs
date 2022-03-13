@@ -35,3 +35,13 @@ function main() {
   fs.writeFileContent("foo.txt", "Hello World").unwrap();
 }
 ```
+
+Unlink a file:
+
+```js
+import fs from "lichenscript-fs";
+
+function main() {
+  fs.unlink("foo.txt").unwrap();
+}
+```
