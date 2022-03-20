@@ -1,5 +1,6 @@
 {
   "conditional-compilation": "Conditional Compilation",
   "syntax-highlighting": "Syntax Highlighting",
-  "garbage-collection": "Garbage Collection"
+  "garbage-collection": "Garbage Collection",
+  "interoperability": "Interoperability"
 }
