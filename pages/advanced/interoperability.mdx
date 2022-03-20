@@ -34,15 +34,50 @@ import "./foo.c";
 
 You can use the macro `MK_I32` to create a value in LichenScript.
 
+```c
+LCValue v = MK_I32(1);
+```
+
 Some primitive types can be directly accessed.
 
 - `LC_NULL`
 - `LC_TRUE`
 - `LC_FALSE`
 
+### Define a function in C
+
+```c
+LCValue lc_fs_read_file_content(LCRuntime* rt, LCValue this, int argc, LCValue* args);
+```
+
+The above signature is a standard signature for LichenScript in C.
+
+### Declare the external C function in LichenScript
+
+```c
+@external("lc_fs_read_file_content")
+public declare function readFileContent(path: string): Result<string, IOError>;
+```
+
+After that, you can directly call `readFileContent` in LichenScript.
+
 ## JavaScript
 
 Values in LichenScript are different from JavaScript.
+
+| LichenScript Value | JavaScript Value |
+| ------------------ | ---------------- |
+| `unit` | `undefined` |
+| `i32` | `number` |
+| `i64` | `number` |
+| `f32` | `number` |
+| `f64` | `number` |
+| `string` | `string` |
+| Array | Array |
+| Tuple | Object |
+| Enum | Object |
+| Class | Object |
+
 
 ## References
 
