@@ -1,0 +1,43 @@
+---
+title: Functions
+---
+
+# Functions
+
+Functions are self-contained chunks of code that perform a specific task. You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed.
+
+## Defining and Calling Functions
+
+```js
+
+function binarySearch(data: i32[], key: i32): Option<i32> {
+    let low = 0;
+    let high = data.length - 1;
+
+    while low <= high {
+        const mid = low + (high - low) / 2;
+        
+        if key == data[mid] {
+            return Some(mid);
+        } else if key < data[mid] {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    None
+}
+
+```
+
+## Main function
+
+A function named `main` is the entry of the program:
+
+```js
+function main() {
+    print("Hello World");
+    print("你好世界");
+}
+```

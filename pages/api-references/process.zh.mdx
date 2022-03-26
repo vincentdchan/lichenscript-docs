@@ -1,0 +1,46 @@
+---
+title: Process
+---
+
+import Callout from 'nextra-theme-docs/callout'
+
+<Callout type="warning" emoji="⚠️">
+  此页需要翻译
+</Callout>
+
+# Process
+
+The methods of the process is precluded by the compiler.
+All the methods can be called without namespace.
+
+### Get the arguments of the program
+
+```js
+const args = getArgs();
+```
+
+### Exit with code
+
+```js
+exit(-1);
+```
+
+### Panic
+
+```js
+panic("panic reason");
+```
+
+The stack will be printed when the program crashed:
+
+```
+[LichenScript] Panic stack:
+0   main                                0x0000000107b1915e lc_std_panic + 142
+1   main                                0x0000000107b1a9cb LCC_c + 187
+2   main                                0x0000000107b1aaa0 LCC_b + 64
+3   main                                0x0000000107b1ab10 LCC_a + 64
+4   main                                0x0000000107b1ab80 LCC_main + 64
+5   main                                0x0000000107b14e21 LCRunMain + 129
+6   main                                0x0000000107b1abfb main + 75
+7   dyld                                0x0000000111f3a4fe start + 462
+```

@@ -1,0 +1,96 @@
+---
+title: 介绍
+---
+
+# LichenScript
+
+[![npm version](https://img.shields.io/npm/v/lichenscript.svg)](https://www.npmjs.com/package/lichenscript)
+
+**LichenScript** 是一门小而快的语言，可以被编译至 JavaScript/C
+
+## 名字的含意
+
+Lichen 意味着“地衣”。希望这门语言是现有的生态大地上“薄薄的一层”。
+
+## 特性
+
+- 先进的语法, 跟 TypeScript/JavaScript 很接近
+- 静态类型
+- 模式匹配
+
+**编译至 C:**
+
+- AOT 编译
+- 快速的冷启动
+- 轻量的运行时
+- 可移植性(WebAssembly/Mobile)
+- 引用记数
+- 使用 C-ABI 调用 C/C++/Rust
+
+**编译至 JavaScript:**
+
+- 可读性强
+- 极小的开销
+- 隔离的环境
+
+## 场景
+
+- 一个 Web App 的插件系统
+- 游戏脚本
+- 小程序
+
+## Roadmap
+
+✅ Done
+🔨 Work in progress
+📖 Planning
+
+| 语法 | 状态 |
+| ------ | ------ |
+| i32/f32 | ✅ |
+| String | ✅ |
+| Array/Map | ✅ |
+| Class/Enum | ✅ |
+| Discriminated union | ✅ |
+| Lambda Expression | ✅ |
+| Pattern matching | ✅ |
+| Object inheritance | ✅ |
+| Tuple | ✅ |
+| i64/f64 | ✅ |
+| For Iterator | 🔨 |
+| Customize getter/setter | 🔨 |
+| Operator overloading | 📖 |
+| Async/await | 📖 |
+
+| 标准库 | 状态 |
+| ------ | ------ |
+| Array | ✅ |
+| Map | ✅ |
+| Regex | 📖 |
+
+| 目标 | 状态 |
+| ------ | ------ |
+| Compiled to C (macOS/Linux) | ✅ |
+| Compiled to C (Emscripten/WASM) | ✅ |
+| Compiled to JavaScript | ✅ |
+
+## 问答
+
+### 跟 Rust 相比有什么不同？
+
+LichenScript 不使用 lifetime
+
+LichenScript 是一个更高阶的语言.
+编程者不需要去关心内存的细节，只要关注逻辑就好了。
+
+
+LichenScript 支持继承。
+
+### 跟 JavaScript/TypeScript 相比有何不同？
+
+- 更加轻量，不需要很重的运行时
+- 使用类型去优化编译结果，相比之下更加“静态”。
+
+### 没有异常机制和 try/catch
+
+因为这个特性需要非常强大的运行时支持，所以暂时不支持。

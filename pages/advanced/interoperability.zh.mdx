@@ -1,0 +1,85 @@
+---
+title: Interoperability
+---
+
+# Interoperability
+
+LichenScript is a thin layer of the existing ecosystem.
+All the low-level operations depend on the target system.
+This chapter will show you how to interoperate the target language and LichenScript.
+
+## Example
+
+The source code of [file system](https://github.com/lichenscript/lichenscript-fs)
+is a very excellent example to demonstrate how to interoperate.
+
+## C
+
+This chapter tells you how to write your own functions
+can be called from the LichenScript.
+
+### Import the sources
+
+The `.h` and `.c` files can be directly imported into the module in LichenScript.
+
+```js
+@platform("native")
+import "./foo.h";
+
+@platform("native")
+import "./foo.c";
+```
+
+### Create a primitive value
+
+You can use the macro `MK_I32` to create a value in LichenScript.
+
+```c
+LCValue v = MK_I32(1);
+```
+
+Some primitive types can be directly accessed.
+
+- `LC_NULL`
+- `LC_TRUE`
+- `LC_FALSE`
+
+### Define a function in C
+
+```c
+LCValue lc_fs_read_file_content(LCRuntime* rt, LCValue this, int argc, LCValue* args);
+```
+
+The above signature is a standard signature for LichenScript in C.
+
+### Declare the external C function in LichenScript
+
+```c
+@external("lc_fs_read_file_content")
+public declare function readFileContent(path: string): Result<string, IOError>;
+```
+
+After that, you can directly call `readFileContent` in LichenScript.
+
+## JavaScript
+
+Values in LichenScript are different from JavaScript.
+
+| LichenScript Value | JavaScript Value |
+| ------------------ | ---------------- |
+| `unit` | `undefined` |
+| `i32` | `number` |
+| `i64` | `bigint` |
+| `f32` | `number` |
+| `f64` | `number` |
+| `string` | `string` |
+| Array | Array |
+| Tuple | Object |
+| Enum | Object |
+| Class | Object |
+
+
+## References
+
+- [C API](https://github.com/lichenscript/lichenscript/blob/master/runtime/c/runtime.h)
+- [JavaScript API](https://github.com/lichenscript/lichenscript/blob/master/runtime/js/runtime.js)

@@ -1,0 +1,69 @@
+---
+title: Classes
+---
+
+# Classes
+
+Classes are general-purpose, flexible constructs that become the building blocks of your program’s code.
+
+## Definition Syntax
+
+```js
+class Base {
+
+    ty: string
+
+    static new(): Base {
+        return Base {
+            ty: "Base",
+        };
+    }
+
+    baseCall() {
+        print("base call");
+    }
+
+    virtual printName() {
+        print("name")
+    }
+
+}
+```
+
+## Initialization
+
+```js
+conat base = Base.new();
+```
+
+Or
+
+```js
+conat base = Base { ty: "base" };
+```
+
+## Inheritance
+
+```js
+class Child extends Base {
+
+    name: string
+
+    static new(): Child {
+        return Child {
+            ...Base.new(),
+            name: "Hello World",
+        };
+    }
+
+    virtual setName(value: string) {
+        this.name = value;
+    }
+
+    override printName() {
+        print("name: ", this.name)
+    }
+
+}
+```
+

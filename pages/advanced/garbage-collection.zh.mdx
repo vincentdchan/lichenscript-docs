@@ -1,0 +1,29 @@
+---
+title: Garbage Collection
+---
+
+import Callout from 'nextra-theme-docs/callout'
+
+# Garbage collection
+
+## Target C
+
+LichenScript use both reference counting
+and mark-and-sweep to reclaim unused memory.
+
+All the objects in LichenScript has a counter
+to count the references. When the counter go down to zero,
+the memory of the object will be freed.
+
+But there a problem called cyclic references, which lead to memory leaks.
+So a mark-and-sweep collector is introduced to solve this problem.
+
+<Callout type="warning" emoji="⚠️">
+  The mark-and-sweep collector is not stable yet. So it's turned off by default.
+  It will be opened by default as soon as possible.
+</Callout>
+
+## Target JavaScript
+
+JavaScript has its own garbage collector.
+There is nothing to worry about.

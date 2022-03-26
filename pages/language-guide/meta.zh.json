@@ -1,0 +1,12 @@
+{
+  "the-basics": "基本语法",
+  "basic-operators": "基本操作",
+  "collection-types": "集合类型",
+  "control-flow": "控制流",
+  "functions": "函数",
+  "lambda-expression": "Lambda 表达式",
+  "enumerations": "枚举",
+  "pattern-matching": "模式匹配",
+  "classes": "类和对象",
+  "modules": "模块"
+}

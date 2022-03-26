@@ -1,0 +1,92 @@
+---
+title: Collection Types
+---
+
+# Collection Types
+
+LichenScript provides three primary collection types, known as tuples, arrays and maps.
+
+## Tuple
+
+In LichenScript, a tuple is a value that contains a fixed number of elements, each with its own type. Tuples are immutable.
+
+Tuples are especially handy for returning multiple values from a method.
+
+A tuple with two elements can be created as follows:
+
+```js
+const tuple = ("one", 1);
+```
+
+This creates a tuple containing a `string` element and an `i32` element.
+
+### Pattern matching on tuples
+
+A tuple can also be taken apart using pattern matching:
+
+```js
+match tuple {
+	case (name, num) => print("name: ", name, " num: ", num)
+}
+```
+
+Here name’s inferred type is `string` and num's inferred type is `i32`.
+
+## Array
+
+```js
+const arr = [3, 2, 1, 4, 5];
+```
+
+### Get the length of an array
+
+```js
+arr.length
+```
+
+### Push elements to array
+
+```js
+const a = [1,2,3,4,5,6,7,8];
+let i = 0;
+while i < 100 {
+    a.push(i);
+    i += 1;
+}
+```
+
+### Slice an array
+
+```js
+arr.slice(2, 3)
+```
+
+### Resize array
+
+Resize the array with a default value.
+
+```js
+a.resize(10, 0);
+```
+
+## Maps
+
+Maps are collections of key-value associations.
+
+```js
+let a = #{
+	"name": "Vincent Chan"
+};
+```
+
+A map with type `Map<string, string>` will return.
+
+### Get a value from the map
+
+```js
+let test = a.get("name");
+match test {
+	case Some(name) => print("found: ", name)
+	case None => print("not found")
+}
+```

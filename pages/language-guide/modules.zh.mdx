@@ -1,0 +1,70 @@
+---
+title: Modules
+---
+
+# Modules
+
+In this chapter, we'll show you how to build a LichenScript program from a collection of files,
+as well as the basics of working with modules and module signatures.
+
+## Module
+
+A module is assembled by all the .lc files in the same directory.
+All the classes, functions, enum in the same module are shared.
+They can refer to each other.
+
+Check the [example](https://github.com/lichenscript/lichenscript/tree/master/examples/module).
+
+## Import a module
+
+If you want to use the members in another module, you have to import them.
+You can import a module using an import statement.
+There are two ways to import another module.
+
+### Import everything into the current scope
+
+```
+import * from 'foo';
+```
+
+You can access all the members marked as public in the foo module.
+If you have a member named `bar` in the `foo` module, you can just call it:
+
+```
+bar()
+```
+
+### Alias the module into an identifier
+
+```
+import foo from 'foo';
+```
+
+You can access the member through the alias:
+
+```
+foo.bar()
+```
+
+## Default import
+
+By default, the compiler of LichenScirpt import a module called `preclude`.
+The compiler automatically adds a statement for your files:
+
+```
+import * from 'preclude';
+```
+
+The preclude module includes some basic facilities such as `Array` and `Map`.
+You don't have to worry about this behaviour will increase the size of the bundle.
+The compiler will remove the unused parts of the module.
+
+The definition of `preclude` is
+[here](https://github.com/lichenscript/lichenscript/blob/master/std/std/preclude/lib.lc).
+
+## How does LichenScript resolve the path of the module?
+
+The compiler will search the module in the current working directory.
+
+Also, it will search in any directories named `node_modules`.
+So you can use [npm](https://www.npmjs.com/) to manage your modules.

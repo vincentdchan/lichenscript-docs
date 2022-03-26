@@ -1,0 +1,81 @@
+---
+title: 开始
+---
+
+# 开始
+
+## 前置准备
+
+- [Node.js](https://nodejs.org/)
+
+macOS:
+
+- 安装 [XCode](https://developer.apple.com/xcode/)
+
+Linux:
+
+- 安装 [gcc](https://gcc.gnu.org/) 或者 [clang](https://clang.llvm.org/)
+
+
+## 安装
+
+```shell
+npm install -g lichenscript
+```
+
+## 快速开始
+
+创建一个新的文件夹，在里面创建一个叫 `main.lc` 的文件。
+
+用编辑器打开这个文件，开始编码：
+
+```js
+function main() {
+    print("Hello World");
+    print("你好世界");
+}
+```
+
+执行以下命令即可以开始编译和运行：
+
+```shell
+lsc run ./main.lc
+```
+
+## 编译至 JavaScript
+
+你可以使用参数 `--platform` 来让编译器把程序编译至 JavaScript：
+
+
+```shell
+lsc run --platform js ./main.lc
+```
+
+## 编译至 WebAssembly
+
+确保你已经安装了 [Emscripten](https://emscripten.org/)。
+
+运行命令：
+
+```shell
+lsc run --platform wasm32 ./main.lc
+```
+
+### 编译至独立的 WebAssembly
+
+一般来说，编译器生成 WASM 的同时会生成一个同名的 js 文件来做加载工作。
+因为在 Web 里面，WASM 不能独立运行。
+
+但是如果你有一个独立的 WASM 解释器，你可以选择把程序编译成一个独立的 WASM 文件。
+只需要使用参数 `--standalone-wasm` 就可以。
+
+比如说，如果你使用 [WasmEdge](https://wasmedge.org/) 来执行 WASM，那么你可以这样执行：
+
+
+```shell
+lsc run --platform wasm32 --standalone-wasm wasmedge ./main.lc
+```
+
+这样编译器会生成一个独立的 WASM 文件，然后调用 wasmedge 来运行。
+
+当然了，在你执行上述命令之前，确保你已经安装了 [WasmEdge](https://wasmedge.org/)。
