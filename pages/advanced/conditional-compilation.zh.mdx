@@ -1,17 +1,14 @@
 ---
-title: Conditional Compilation
+title: 条件编译
 ---
 
-# Conditional Compilation
+# 条件编译
 
-Sometimes you want some code that is only available on some specific platforms.
-You need conditional compilation.
+有时候你需要一些代码只在某个平台下进行编译，这个时候你就需要条件编译。
 
-In LichenScript, you can use an attribute to tell the compiler whether to use the code in specific platforms.
-That's the `platform` tag.
+你可以使用 `platform` 装饰器来告诉编译器你想把接下来的代码用在那些平台当中。
 
-For example, you want to define a platform-specific function named fork.
-Then you add an attribute to it.
+比如说，你只想在某些平台下使用 `fork` 函数，你就可以这样写：
 
 ```js
 @platform("native")
@@ -20,7 +17,7 @@ function fork() {
 }
 ```
 
-You can add multiple platforms:
+你也可以添加多个平台：
 
 ```js
 @platform("native", "wasm32")
