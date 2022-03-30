@@ -18,6 +18,8 @@ npm install --save lichenscript-fs
 
 ## Usage
 
+### Read/Write data into buffer
+
 Read data from file:
 
 ```js
@@ -39,7 +41,21 @@ function main() {
 }
 ```
 
-Unlink a file:
+### Read/Write data into buffer
+
+```js
+import fs from "lichenscript-fs";
+
+function main() {
+  // Read data into buffer from file:
+  const buffer = fs.readFile("/tmp/foo.txt").unwrap();
+  print(content);
+  // Write buffer to file:
+  fs.writeFile("foo.txt", buffer).unwrap();
+}
+```
+
+### Unlink a file:
 
 ```js
 import fs from "lichenscript-fs";
